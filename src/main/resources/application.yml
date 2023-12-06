@@ -1,0 +1,31 @@
+application:
+  version: 0.1.0
+  title: Using 'Task file' to manage your projects in local development
+  owner: JeyCode
+spring:
+  profiles:
+    active: standalone
+---
+
+logging:
+  level:
+    root: INFO
+
+server:
+  servlet:
+    context-path: /tskfs
+
+
+spring:
+
+  #  devtools.restart.enabled: true
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+
+  config:
+    activate:
+      on-profile: standalone

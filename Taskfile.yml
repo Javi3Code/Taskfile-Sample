@@ -1,0 +1,11 @@
+version: '3'
+
+#  vars:
+
+dotenv:
+  - "dot-env/.env"
+
+tasks:
+  setup:
+    desc: "Create all the necessary aws resources to run the app locally, using localstack. Create database in postgresql if not exists."
+    cmd: aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
